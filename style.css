@@ -348,7 +348,7 @@ p.job__period {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: 250px;
   height: 250px;
   margin: 3px;
   background-color: var(--color-light-white);
