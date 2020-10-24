@@ -114,12 +114,12 @@ p {
   cursor: pointer;
   padding: 8px 12px;
   margin: 0 4px;
-  color: var(--color-white);
   border-radius: var(--size-border-radius);
 }
 
 .navbar__menu__item.active {
   border: 1px solid var(--color-white);
+  display: none;
 }
 
 .navbar__menu__item:hover {
@@ -412,11 +412,11 @@ p.job__period {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  margin: 12px;
+  margin: 20px;
 }
 
 .testimonial__avatar:nth-child(odd) {
-  margin-right: 40p;
+  margin-right: 40px;
 }
 
 .testimonial__avatar:nth-child(event) {
@@ -461,4 +461,76 @@ p.job__period {
   transform: scale(1.1);
   color: var(--color-yellow);
   transition: all var(--annimation-duration);
+}
+
+.navbar__toggle-btn {
+  position: absolute;
+  right: 32px;
+  top: 25px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+}
+
+/* 토글은 차이점, 최소한의 정보만 작성 */
+@media screen and (max-width: 780px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .about__majors {
+    flex-direction: column;
+  }
+
+  .major {
+    margin-bottom: 30px;
+  }
+
+  .job__name {
+    margin: 10px 0px;
+    font-size: 13px;
+  }
+
+  .job__period {
+    font-size: 10px;
+  }
+
+  .job__description2 {
+    font-size: 13px;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+
+  .category__btn {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  /* grow 알아서 화면을 메꿔주는 것 */
+  .project {
+    flex-grow: 1;
+  }
+
+  .testimonial__avatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .testimonial__speech-bubble p {
+    font-size: 13px;
+  }
 }
