@@ -585,7 +585,7 @@ p.job__period {
     position: fixed;
     bottom: 5%;
     right: 5%;
-    font-size: 30px;
+    font-size: 10px;
     background-color: var(--color-pink);
     color: var(--color-white);
     border-radius: 50%;
