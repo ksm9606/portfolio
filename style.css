@@ -581,11 +581,11 @@ p.job__period {
     font-size: 13px;
   }
 
-  .arrow-up,
-  .arrow-up.i {
+  .arrow-up {
     position: fixed;
     bottom: 5%;
     right: 5%;
+    width: auto;
     font-size: 40px;
     background-color: var(--color-pink);
     color: var(--color-white);
