@@ -146,6 +146,10 @@ p {
   text-align: center;
 }
 
+#home.home--opacity {
+  opacity: 1;
+}
+
 .home__avatar {
   width: 250px;
   height: 250px;
