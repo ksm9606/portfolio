@@ -15,7 +15,7 @@ document.addEventListener('scroll', ()=>{
     }
 })
 
-// Navbar menu scrolling 
+// Navbar menu 누르면 이동
 const navbarMenu = document.querySelector(".navbar__menu");
 navbarMenu.addEventListener('click', (event)=>{
     const target = event.target;
@@ -58,3 +58,19 @@ const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', ()=>{
     home.style.opacity = 1 - (window.scrollY / homeHeight);
 })
+
+// Arrow up button
+const arrow = document.querySelector(".arrow-up");
+
+document.addEventListener('scroll', ()=>{   
+    if(window.scrollY > homeHeight/2){
+        arrow.classList.add('visible');
+    }else{
+        arrow.classList.remove('visible');
+    }
+})
+
+arrow.addEventListener('click', ()=>{
+    scrollIntoView('#home');
+})
+

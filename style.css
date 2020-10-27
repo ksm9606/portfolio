@@ -489,6 +489,27 @@ p.job__period {
   display: none;
 }
 
+/* Scroll */
+.arrow-up {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  bottom: 50px;
+  right: 50px;
+  font-size: 50px;
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 300ms ease-in;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* 토글은 차이점, 최소한의 정보만 작성 */
 @media screen and (max-width: 780px) {
   .navbar__toggle-btn {
