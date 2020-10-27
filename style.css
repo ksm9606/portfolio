@@ -582,7 +582,7 @@ p.job__period {
   }
 
   .arrow-up {
-    position: absolute;
+    position: fixed;
     bottom: 5%;
     right: 5%;
     font-size: 20px;
@@ -592,5 +592,12 @@ p.job__period {
     opacity: 0;
     pointer-events: none;
     transition: all 300ms ease-in;
+  }
+
+  .arrow-up.visible {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    font-size: 40px;
   }
 }
