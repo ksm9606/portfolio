@@ -492,11 +492,8 @@ p.job__period {
 /* Scroll */
 .arrow-up {
   position: fixed;
-  width: 70px;
-  height: 70px;
-  bottom: 50px;
-  right: 50px;
-  font-size: 50px;
+  width: 40px;
+  height: 40px;
   background-color: var(--color-pink);
   color: var(--color-white);
   border-radius: 50%;
@@ -596,8 +593,6 @@ p.job__period {
 
   .arrow-up.visible {
     position: fixed;
-    bottom: 5%;
-    right: 5%;
-    font-size: 40px;
+    font-size: 20px;
   }
 }
