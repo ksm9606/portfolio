@@ -583,8 +583,8 @@ p.job__period {
 
   .arrow-up {
     position: absolute;
-    bottom: 10%;
-    right: 10%;
+    bottom: 5%;
+    right: 5%;
     font-size: 20px;
     background-color: var(--color-pink);
     color: var(--color-white);
