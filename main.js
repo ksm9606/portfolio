@@ -44,7 +44,7 @@ navbarMenu.addEventListener('click', (event)=>{
 const homeContactBtn = document.querySelector(".home__contact");
 homeContactBtn.addEventListener('click',()=>{
     scrollIntoView('#contact');
-})
+});
 
 function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
@@ -57,7 +57,7 @@ const homeHeight = home.getBoundingClientRect().height;
 
 document.addEventListener('scroll', ()=>{
     home.style.opacity = 1 - (window.scrollY / homeHeight);
-})
+});
 
 // Arrow up button
 const arrow = document.querySelector(".arrow-up");
@@ -68,9 +68,30 @@ document.addEventListener('scroll', ()=>{
     }else{
         arrow.classList.remove('visible');
     }
-})
+});
 
 arrow.addEventListener('click', ()=>{
     scrollIntoView('#home');
-})
+});
 
+//My work filtering
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+
+workBtnContainer.addEventListener('click', (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+
+  projects.forEach((project) => {
+    console.log(project.dataset.type);
+    if (filter === '*' || filter === project.dataset.type) {
+      project.classList.remove('invisible');
+    } else {
+      project.classList.add('invisible');
+    }
+  });
+    
+});
