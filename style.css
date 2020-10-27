@@ -482,8 +482,8 @@ p.job__period {
 
 .navbar__toggle-btn {
   position: absolute;
-  right: 32px;
-  top: 25px;
+  right: 10px;
+  top: 15px;
   font-size: 24px;
   color: var(--color-white);
   display: none;
@@ -514,6 +514,10 @@ p.job__period {
 @media screen and (max-width: 780px) {
   .navbar__toggle-btn {
     display: block;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    font-size: 20px;
   }
 
   #navbar {
@@ -536,9 +540,14 @@ p.job__period {
     margin-bottom: 30px;
   }
 
+  .job__logo {
+    width: 20px;
+    height: 20px;
+  }
+
   .job__name {
     margin: 10px 0px;
-    font-size: 13px;
+    font-size: 10px;
   }
 
   .job__period {
@@ -546,7 +555,7 @@ p.job__period {
   }
 
   .job__description2 {
-    font-size: 13px;
+    font-size: 11px;
   }
 
   .skillset {
@@ -570,5 +579,20 @@ p.job__period {
 
   .testimonial__speech-bubble p {
     font-size: 13px;
+  }
+
+  .arrow-up {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 5%;
+    right: 5%;
+    font-size: 30px;
+    background-color: var(--color-pink);
+    color: var(--color-white);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 300ms ease-in;
   }
 }
