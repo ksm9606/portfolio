@@ -584,7 +584,7 @@ p.job__period {
   .arrow-up {
     position: fixed;
     bottom: 5%;
-    right: 5%;
+    right: 3%;
     width: 20px;
     height: 20px;
     font-size: 10px;
