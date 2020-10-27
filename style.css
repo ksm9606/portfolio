@@ -492,8 +492,8 @@ p.job__period {
 /* Scroll */
 .arrow-up {
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 25%;
+  right: 5%;
   width: 70px;
   height: 70px;
   font-size: 50px;
