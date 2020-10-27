@@ -109,6 +109,10 @@ p {
   padding: 8px;
   z-index: 1;
 }
+/*  */
+#navbar.navbar--dark:hover {
+  background-color: var(--color-pink);
+}
 
 .navbar__menu {
   display: flex;
