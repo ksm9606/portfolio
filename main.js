@@ -85,13 +85,16 @@ workBtnContainer.addEventListener('click', (e) => {
     return;
   }
 
-  projects.forEach((project) => {
-    console.log(project.dataset.type);
-    if (filter === '*' || filter === project.dataset.type) {
-      project.classList.remove('invisible');
-    } else {
-      project.classList.add('invisible');
-    }
-  });
-    
+  projectContainer.classList.add('annim-out');
+  setTimeout(()=>{
+    projects.forEach((project) => {
+        console.log(project.dataset.type);
+        if (filter === '*' || filter === project.dataset.type) {
+          project.classList.remove('invisible');
+        } else {
+          project.classList.add('invisible');
+        }
+      });
+    projectContainer.classList.remove('annim-out');
+  }, 200); 
 });
