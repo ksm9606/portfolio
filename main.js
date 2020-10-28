@@ -23,7 +23,7 @@ navbarMenu.addEventListener('click', (event)=>{
     if(link == null){
         return;
     }
-
+    navbarMenu.classList.remove('open');
     scrollIntoView(link);
 
     // 이렇게도 사용가능
@@ -40,6 +40,14 @@ navbarMenu.addEventListener('click', (event)=>{
 //     const scrollTo = document.querySelector("#contact");
 //     scrollTo.scrollIntoView({behavior:"smooth"});
 // })
+
+
+// Navbar toggle button
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open')
+});
+
 
 const homeContactBtn = document.querySelector(".home__contact");
 homeContactBtn.addEventListener('click',()=>{
@@ -58,6 +66,7 @@ const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', ()=>{
     home.style.opacity = 1 - (window.scrollY / homeHeight);
 });
+
 
 // Arrow up button
 const arrow = document.querySelector(".arrow-up");
@@ -85,6 +94,14 @@ workBtnContainer.addEventListener('click', (e) => {
     return;
   }
 
+// Remove selection from the previous item and select the new one
+const active = document.querySelector('.category__btn.selected');
+active.classList.remove('selected');
+const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+target.classList.add('selected');
+
+
+//My work button annimation
   projectContainer.classList.add('annim-out');
   setTimeout(()=>{
     projects.forEach((project) => {
