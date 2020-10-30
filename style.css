@@ -94,20 +94,19 @@ p {
 /* navbar */
 #navbar {
   position: fixed;
-  display: flex;
   width: 100%;
+  display: flex;
   justify-content: space-between;
-  background-color: transparent;
   align-items: center;
-  color: var(--color-white);
-  padding: 3px 8px;
-  transition: all var(--annimation-duration) ease-in-out;
+  padding: 8px;
+  background-color: transparent;
+  transition: all var(--animation-duration) ease-in-out;
+  z-index: 1;
 }
 
 #navbar.navbar--dark {
   background-color: var(--color-dark-pink);
-  padding: 3px 8px;
-  z-index: 1;
+  padding: 8px;
 }
 /*  */
 /* #navbar.navbar--dark:hover {
@@ -119,6 +118,7 @@ p {
 }
 
 .navbar__logo {
+  color: var(--color-white);
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
 }
@@ -168,6 +168,10 @@ p {
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radius);
   color: var(--color-white);
+}
+
+.home__contact:hover {
+  background-color: var(--color-orange);
 }
 
 /* Section common */
@@ -220,7 +224,7 @@ p {
   display: flex;
   align-items: center;
   padding: 20px;
-  border-bottom: solid 1px black;
+  border-top: solid 1px black;
 }
 
 .job__logo {
@@ -319,6 +323,7 @@ p.job__period {
 }
 
 .category__btn {
+  position: relative;
   border: 1px solid var(--color-dark-grey);
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
@@ -345,9 +350,10 @@ p.job__period {
   width: 24px;
   height: 24px;
   line-height: 24px;
-  position: relative;
   top: -20px;
-  left: 4px;
+  right: 30px;
+  position: absolute;
+
   opacity: 0;
   transition: all var(--annimation-duration) ease-in;
 }
@@ -445,7 +451,7 @@ p.job__period {
   margin-right: 40px;
 }
 
-.testimonial__avatar:nth-child(event) {
+.testimonial__avatar:nth-child(even) {
   margin-left: 40px;
 }
 
@@ -501,11 +507,12 @@ p.job__period {
 /* Scroll */
 .arrow-up {
   position: fixed;
-  bottom: 5%;
-  right: 5%;
-  width: 70px;
-  height: 70px;
-  font-size: 50px;
+  right: 16px;
+  bottom: 16px;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
   color: var(--color-white);
   background-color: var(--color-pink);
   border-radius: 50%;
@@ -521,18 +528,31 @@ p.job__period {
 
 /* 토글은 차이점, 최소한의 정보만 작성 */
 @media screen and (max-width: 780px) {
+  :root {
+    /* font-size:  */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
   .navbar__toggle-btn {
     display: block;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    font-size: 20px;
+    top: 16px;
+    right: 16px;
+    font-size: var(--font-medium);
   }
 
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    padding: 10px;
     background-color: var(--color-pink);
+  }
+
+  #navbar.navbar--dark {
+    padding: 10px;
   }
 
   .navbar__menu {
@@ -546,8 +566,15 @@ p.job__period {
     display: block;
   }
 
+  .section {
+    padding: 16px;
+    padding-top: 50px;
+  }
+
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
   }
 
   .major {
@@ -577,6 +604,7 @@ p.job__period {
   }
 
   .category__btn {
+    padding: 8px;
     margin-bottom: 10px;
     width: 100%;
   }
@@ -586,12 +614,25 @@ p.job__period {
     flex-grow: 1;
   }
 
-  .testimonial__avatar {
-    width: 50px;
-    height: 50px;
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .testimonial__speech-bubble p {
+  .testimonial__avatar {
+    margin: 0;
+    width: 100px;
+    height: 100px;
+  }
+
+  .testimonial__avatar:nth-child(odd),
+  .testimonial__avatar:nth-child(even) {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .testimonial__speech-bubble {
+    order: 1;
     font-size: 13px;
   }
 }

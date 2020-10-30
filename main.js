@@ -1,18 +1,18 @@
 'use strict';
 
 // Navbar 올라가면 투명, 내려가면 핑크
-const navbar = document.querySelector("#navbar");
-const navbarHeight = navbar.getBoundingClientRect().height
+const navbar = document.querySelector('#navbar');
+const navbarHeight = navbar.getBoundingClientRect().height;
 
 document.addEventListener('scroll', ()=>{
-    // console.log(window.scrollY);
-    // console.log(`navbarHeight : ${navbarHeight}`);
+  console.log(window.scrollY);
+  console.log(`navbarHeight : ${navbarHeight}`);
 
-    if(window.scrollY > navbarHeight){
-        navbar.classList.add('navbar--dark');
-    }else{
-        navbar.classList.remove('navbar--dark')
-    }
+  if(window.scrollY > navbarHeight){
+    navbar.classList.add('navbar--dark');
+  }else{
+    navbar.classList.remove('navbar--dark');
+  }
 })
 
 // Navbar menu 누르면 이동
@@ -66,7 +66,6 @@ const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', ()=>{
     home.style.opacity = 1 - (window.scrollY / homeHeight);
 });
-
 
 // Arrow up button
 const arrow = document.querySelector(".arrow-up");
