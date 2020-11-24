@@ -177,7 +177,7 @@ p {
 /* Section common */
 .section {
   text-align: center;
-  padding: 50px;
+  padding: 70px;
   margin: auto;
 }
 
@@ -186,11 +186,54 @@ p {
   margin: auto;
 }
 
+/* myself */
+.myselfset {
+  margin-top: 70px;
+  display: flex;
+  /* background-color: #4d4d4d; */
+}
+
+.context {
+  margin-top: 50px;
+}
+
+.context1 p {
+  padding-left: 150px;
+  font-size: 15px;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.context2 p {
+  padding-left: 150px;
+  text-align: left;
+  font-size: 15px;
+  margin-top: 50px;
+}
+
+.myselfleft {
+  text-align: center;
+  flex-basis: 60%;
+}
+
+.myselfright {
+  text-align: center;
+  flex-basis: 30%;
+}
+
 /* About */
+#about {
+  background-color: white;
+}
+
+.about__section {
+  border-top: solid 1px lightgray;
+}
+
 .about__majors {
   display: flex;
   justify-content: space-between;
-  margin: 80px 0;
+  margin: 70px 0;
 }
 
 .major__icon {
@@ -456,6 +499,8 @@ p.job__period {
 }
 
 .testimonial__speech-bubble {
+  display: flex;
+  align-items: center;
   padding: 18px;
   background-color: var(--color-white);
   border-radius: var(--size-border-radius);
